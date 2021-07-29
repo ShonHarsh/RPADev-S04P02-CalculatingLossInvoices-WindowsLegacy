@@ -21,7 +21,13 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 ### Sample Output
 
 ```
-//ToDo
+The sum of the invoices to be recorded as loss:
+Agitude = 750
+Cryptomba = 730
+Epiloo = 2180
+Teamatix = 350
+Travels Print = 570
+Unit&Products Inc. = 1305
 ```
 
 ### RPA Developer Foundation Sections
