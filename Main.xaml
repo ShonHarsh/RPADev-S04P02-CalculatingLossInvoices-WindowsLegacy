@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="999,1666" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="999,1682" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -75,9 +75,10 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Check the invoices issued to bankruptcy clients&#xD;&#xA;&#xD;&#xA;Check which of the invoices in an Excel file were issued to clients in bankruptcy and calculate the sum of the invoices to be recorded as loss.&#xD;&#xA;&#xD;&#xA;Input files:&#xD;&#xA;&#xD;&#xA;Invoices (.xlsx)&#xD;&#xA;Clients (.csv)&#xD;&#xA;&#xD;&#xA;--------&#xD;&#xA;&#xD;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Clients.csv&#xD;&#xA;Headers &amp; First Row:&#xD;&#xA;ClientID ClientName IsBankrupt&#xD;&#xA;1 Unit&amp;Products Inc. TRUE&#xD;&#xA;Sheet Name: RPADev-S04P02-CalculatingLossIn&#xD;&#xA;&#xD;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Invoices.xlsx&#xD;&#xA;Headers &amp; First Row:&#xD;&#xA;InvoiceID ClientName InvoiceValue&#xD;&#xA;1 Unit&amp;Products Inc. 100&#xD;&#xA;Sheet Name: Sheet1" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="476,1317" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Check the invoices issued to bankruptcy clients&#xD;&#xA;&#xD;&#xA;Check which of the invoices in an Excel file were issued to clients in bankruptcy and calculate the sum of the invoices to be recorded as loss.&#xD;&#xA;&#xD;&#xA;Input files:&#xD;&#xA;&#xD;&#xA;Invoices (.xlsx)&#xD;&#xA;Clients (.csv)&#xD;&#xA;&#xD;&#xA;--------&#xD;&#xA;&#xD;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Clients.csv&#xD;&#xA;Headers &amp; First Row:&#xD;&#xA;ClientID ClientName IsBankrupt&#xD;&#xA;1 Unit&amp;Products Inc. TRUE&#xD;&#xA;Sheet Name: RPADev-S04P02-CalculatingLossIn&#xD;&#xA;&#xD;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Invoices.xlsx&#xD;&#xA;Headers &amp; First Row:&#xD;&#xA;InvoiceID ClientName InvoiceValue&#xD;&#xA;1 Unit&amp;Products Inc. 100&#xD;&#xA;Sheet Name: Sheet1" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="476,1517" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="custTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="custInvoiceTable" />
@@ -135,7 +136,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:JoinDataTables DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner">
+    <ui:JoinDataTables DisplayName="Join Data Tables Into MergedDataTable" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner">
       <ui:JoinDataTables.Arguments>
         <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
           <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -168,6 +169,39 @@
         </OutArgument>
       </ui:JoinDataTables.OutputDataTable>
     </ui:JoinDataTables>
+    <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
+      <ui:FilterDataTable.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">mergedDataTable</mca:CSharpValue>
+        </InArgument>
+      </ui:FilterDataTable.DataTable>
+      <ui:FilterDataTable.Filters>
+        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">"IsBankrupt"</mca:CSharpValue>
+              </InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">"TRUE"</mca:CSharpValue>
+              </InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+        </scg:List>
+      </ui:FilterDataTable.Filters>
+      <ui:FilterDataTable.OutputDataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">mergedDataTable</mca:CSharpReference>
+        </OutArgument>
+      </ui:FilterDataTable.OutputDataTable>
+      <ui:FilterDataTable.SelectColumns>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <x:Null />
+        </scg:List>
+      </ui:FilterDataTable.SelectColumns>
+    </ui:FilterDataTable>
     <Sequence DisplayName="Temporary Printing" sap:VirtualizedContainerService.HintSize="434,215" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
