@@ -21,13 +21,16 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 ### Sample Output
 
 ```
-The sum of the invoices to be recorded as loss:
-Agitude = 750
-Cryptomba = 730
-Epiloo = 2180
-Teamatix = 350
-Travels Print = 570
-Unit&Products Inc. = 1305
+07/30/2021 16:13:27 => [Debug] Execution started for project: RPADev-S04P02-CalculatingLossInvoices
+07/30/2021 16:13:29 => [Info] RPADev-S04P02-CalculatingLossInvoices execution started
+07/30/2021 16:13:33 => [Debug] Agitude 750
+07/30/2021 16:13:33 => [Debug] Cryptomba 730
+07/30/2021 16:13:33 => [Debug] Epiloo 2180
+07/30/2021 16:13:33 => [Debug] Teamatix 350
+07/30/2021 16:13:33 => [Debug] Travels Print 570
+07/30/2021 16:13:33 => [Debug] Unit&Products Inc. 1305
+07/30/2021 16:13:33 => [Debug] The total amount lost from all invoices: 5885
+07/30/2021 16:13:33 => [Info] RPADev-S04P02-CalculatingLossInvoices execution ended in: 00:00:03
 ```
 
 ### RPA Developer Foundation Sections
