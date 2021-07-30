@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1171,3743" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="908,4828" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -75,16 +75,15 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="773,3578" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap:VirtualizedContainerService.HintSize="773,4663" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Check the invoices issued to bankruptcy clients&#xA;&#xA;Check which of the invoices in an Excel file were issued to clients in bankruptcy and calculate the sum of the invoices to be recorded as loss.&#xA;&#xA;Input files:&#xA;&#xA;Invoices (.xlsx)&#xA;Clients (.csv)&#xA;&#xA;--------&#xA;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Clients.csv&#xA;Sheet Name: RPADev-S04P02-CalculatingLossIn&#xA;Headers &amp; First Row:&#xA;ClientID ClientName IsBankrupt&#xA;1 Unit&amp;Products Inc. TRUE&#xA;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Invoices.xlsx&#xA;Sheet Name: Sheet1&#xA;Headers &amp; First Row:&#xA;InvoiceID ClientName InvoiceValue&#xA;1 Unit&amp;Products Inc. 100&#xA;&#xA;--------&#xA;&#xA;Target&#xA;Agitude = 750&#xA;Cryptomba = 730&#xA;Epiloo = 2180&#xA;Teamatix = 350&#xA;Travels Print = 570&#xA;Unit&amp;Products Inc. = 1305" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="731,3486" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence sap2010:Annotation.AnnotationText="Check the invoices issued to bankruptcy clients&#xA;&#xA;Check which of the invoices in an Excel file were issued to clients in bankruptcy and calculate the sum of the invoices to be recorded as loss.&#xA;&#xA;Input files:&#xA;&#xA;Invoices (.xlsx)&#xA;Clients (.csv)&#xA;&#xA;--------&#xA;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Clients.csv&#xA;Sheet Name: RPADev-S04P02-CalculatingLossIn&#xA;Headers &amp; First Row:&#xA;ClientID ClientName IsBankrupt&#xA;1 Unit&amp;Products Inc. TRUE&#xA;&#xA;File: RPADev-S04P02-CalculatingLossInvoices-Invoices.xlsx&#xA;Sheet Name: Sheet1&#xA;Headers &amp; First Row:&#xA;InvoiceID ClientName InvoiceValue&#xA;1 Unit&amp;Products Inc. 100&#xA;&#xA;--------&#xA;&#xA;Target&#xA;Agitude = 750&#xA;Cryptomba = 730&#xA;Epiloo = 2180&#xA;Teamatix = 350&#xA;Travels Print = 570&#xA;Unit&amp;Products Inc. = 1305" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="731,4571" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="custTable" />
         <Variable x:TypeArguments="sd:DataTable" Name="custInvoiceTable" />
@@ -103,10 +102,10 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="The note here is the process for .csv and then the operation for the .xlsx." DisplayName="Sequence Get Data Container" sap:VirtualizedContainerService.HintSize="689,123" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence sap2010:Annotation.AnnotationText="The note here is the process for .csv and then the operation for the .xlsx." DisplayName="Sequence Get Data Container" sap:VirtualizedContainerService.HintSize="689,637" sap2010:WorkflowViewState.IdRef="Sequence_13">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
@@ -159,15 +158,15 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap2010:Annotation.AnnotationText="Join CustInvoiceTable and CustTable and filter on Bankrupt." DisplayName="Sequence Filter Data" sap:VirtualizedContainerService.HintSize="689,123" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence sap2010:Annotation.AnnotationText="Join CustInvoiceTable and CustTable and filter on Bankrupt." DisplayName="Sequence Filter Data" sap:VirtualizedContainerService.HintSize="689,649" sap2010:WorkflowViewState.IdRef="Sequence_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:JoinDataTables sap2010:Annotation.AnnotationText="select * from custInvoiceTable&#xD;&#xA;  join custTable&#xD;&#xA;    where custTable.ClientName ==&#xD;&#xA;      custInvoiceTable.ClientName;" DisplayName="Join Data Tables Into MergedDataTable" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner">
+        <ui:JoinDataTables sap2010:Annotation.AnnotationText="select * from custInvoiceTable&#xA;  join custTable&#xA;    where custTable.ClientName ==&#xA;      custInvoiceTable.ClientName;" DisplayName="Join Data Tables Into MergedDataTable" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner">
           <ui:JoinDataTables.Arguments>
             <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
               <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -243,7 +242,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:FilterDataTable>
-        <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Hardcodeing the sort index to 1.&#xD;&#xA;Merged header values: InvoiceID, ClientName, InvoiceValue, ClientID, ClientName, IsBankrupt" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="334,124" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" SortOrder="Ascending">
+        <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Hardcodeing the sort index to 1.&#xA;Merged header values: InvoiceID, ClientName, InvoiceValue, ClientID, ClientName, IsBankrupt" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="334,124" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" SortOrder="Ascending">
           <ui:SortDataTable.ColumnIndex>
             <InArgument x:TypeArguments="s:Nullable(x:Int32)">
               <mca:CSharpValue x:TypeArguments="s:Nullable(x:Int32)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">1</mca:CSharpValue>
@@ -284,7 +283,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="We need to track the customer value in each row to determine when the customer changes since the totals are by customer.&#xD;&#xA;&#xD;&#xA;Important!&#xD;&#xA;I have noticed that the column, number and name selection gets cleared.  Selecting the Name radio button will populate the &quot;ClientName&quot; in the input text area.  This appears to only be a visual bug." ColumnName="ClientName" DisplayName="Get Row Item ClientName" sap:VirtualizedContainerService.HintSize="611,302" sap2010:WorkflowViewState.IdRef="GetRowItem_2">
+              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="We need to track the customer value in each row to determine when the customer changes since the totals are by customer.&#xA;&#xA;Important!&#xA;I have noticed that the column, number and name selection gets cleared.  Selecting the Name radio button will populate the &quot;ClientName&quot; in the input text area.  This appears to only be a visual bug." ColumnName="ClientName" DisplayName="Get Row Item ClientName" sap:VirtualizedContainerService.HintSize="611,302" sap2010:WorkflowViewState.IdRef="GetRowItem_2">
                 <ui:GetRowItem.Row>
                   <InArgument x:TypeArguments="sd:DataRow">
                     <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">item</mca:CSharpValue>
@@ -378,7 +377,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:GetRowItem>
-                <If sap2010:Annotation.AnnotationText="LossTotalDictionary will hold the customer and invoice value.  The dictionary is initialized in the variables pane but not populated with any data.&#xD;&#xA;LossTotalDictionary&lt;String, Double&gt;&#xD;&#xA;&#xD;&#xA;After this code block the LossTotalDictionary will contain one element for each customer and the total invoice value." DisplayName="If LossTotalDictionary Populate" sap:VirtualizedContainerService.HintSize="569,362" sap2010:WorkflowViewState.IdRef="If_4">
+                <If sap2010:Annotation.AnnotationText="LossTotalDictionary will hold the customer and invoice value.  The dictionary is initialized in the variables pane but not populated with any data.&#xA;LossTotalDictionary&lt;String, Double&gt;&#xA;&#xA;After this code block the LossTotalDictionary will contain one element for each customer and the total invoice value." DisplayName="If LossTotalDictionary Populate" sap:VirtualizedContainerService.HintSize="569,362" sap2010:WorkflowViewState.IdRef="If_4">
                   <If.Condition>
                     <InArgument x:TypeArguments="x:Boolean">
                       <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">lossTotalDictionary.ContainsKey(currentCustomer)</mca:CSharpValue>
@@ -409,7 +408,7 @@
                     </Assign>
                   </If.Then>
                   <If.Else>
-                    <Assign sap2010:Annotation.AnnotationText="Case the the key does not exist." DisplayName="Assign LossTotalDictionary New Value" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign sap2010:Annotation.AnnotationText="Case the the key does not exist." DisplayName="Assign LossTotalDictionary New Key" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Double">
                           <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">lossTotalDictionary[currentCustomer]</mca:CSharpReference>
@@ -445,7 +444,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
-      <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterate through the LossTotalDictionary to report the data.  Also, keep track of the invoice value in the invoiceLossTotal variable for extra credit." DisplayName="For Each LossTotalDictionary" sap:VirtualizedContainerService.HintSize="689,444" sap2010:WorkflowViewState.IdRef="ForEach`1_9">
+      <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterate through the LossTotalDictionary to report the data.  Also, keep track of the invoice value in the invoiceLossTotal variable for extra credit.&#xD;&#xA;&#xD;&#xA;This ForEach loop TypeArgument must be set to the System.Collections.Generic.KeyValuePair." DisplayName="For Each LossTotalDictionary" sap:VirtualizedContainerService.HintSize="689,489" sap2010:WorkflowViewState.IdRef="ForEach`1_9">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:Double)">
             <ActivityAction.Argument>
