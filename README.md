@@ -33,6 +33,12 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 07/30/2021 16:13:33 => [Info] RPADev-S04P02-CalculatingLossInvoices execution ended in: 00:00:03
 ```
 
+### Notes
+
+The ForEach loop TypeArgument must be set to the System.Collections.Generic.KeyValuePair.
+
+![](https://shonharsh.github.io/curriculum-vitae/images/RPADev-S04P02-CalculatingLossInvoices-KeyValuePair.jpg)
+
 ### RPA Developer Foundation Sections
 
 1. Get Started With RPA Development
