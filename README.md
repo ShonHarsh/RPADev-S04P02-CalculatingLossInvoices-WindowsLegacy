@@ -8,6 +8,17 @@ This project is my solution in **C#** to the **Calculating Loss Invoices** pract
 
 After making a pull request or downloading the project, open the Main.xaml in UiPath Studio.  The robot can be run with the play button in the ribbon and the result can be seen in output pane.
 
+#### PRACTICE REQUIREMENTS
+
+###### Check the invoices issued to bankruptcy clients
+
+Check which of the invoices in an Excel file were issued to clients in bankruptcy and calculate the sum of the invoices to be recorded as loss.
+
+**Input files:**
+
+- Invoices (.xlsx)
+- Clients (.csv)
+
 ### Details
 
 **Course:** UiPath - RPA Developer Foundation
