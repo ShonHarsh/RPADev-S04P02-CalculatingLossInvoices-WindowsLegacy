@@ -1,0 +1,10 @@
+04/29/2024 13:12:51 => [Debug] Debug started for file: Main
+04/29/2024 13:12:52 => [Info] RPADev-S04P02-CalculatingLossInvoices-WindowsLegacy execution started
+04/29/2024 13:12:55 => [Debug] Agitude 750
+04/29/2024 13:12:55 => [Debug] Cryptomba 730
+04/29/2024 13:12:55 => [Debug] Epiloo 2180
+04/29/2024 13:12:55 => [Debug] Teamatix 350
+04/29/2024 13:12:55 => [Debug] Travels Print 570
+04/29/2024 13:12:55 => [Debug] Unit&Products Inc. 1305
+04/29/2024 13:12:55 => [Debug] The total amount lost from all invoices: 5885
+04/29/2024 13:12:55 => [Info] RPADev-S04P02-CalculatingLossInvoices-WindowsLegacy execution ended in: 00:00:03
